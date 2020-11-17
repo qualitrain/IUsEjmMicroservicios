@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+	<title>Registro eventos</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+	      crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>	      
+</head>
+<body>
+	<div class="container bg-light">
+	<h5 class="text-center text-primary py-3">Programaci&oacute;n de Eventos</h5>
+		<div class="row mx-2 my-2">
+		
+			<div class="form-check col-4 col-sm-2">
+			  <input class="form-check-input" type="checkbox" value="" id="idChkUsarPlantilla">
+			  <label class="form-check-label" for="idChkUsarPlantilla">
+			    Usar plantilla
+			  </label>
+			</div>
+			
+			<div class="col-8 col-sm-5">
+	   		    <label for="idTipoPlantilla">
+			    Tipo:&nbsp;
+			    </label>
+				<select class="custom-select custom-select-sm" id="idTipoPlantilla">
+				  <option value="1" selected>Administraci&oacute;n de proyectos</option>
+				  <option value="2">Scrum</option>
+				  <option value="3">Adquisiciones</option>
+				</select>	
+			</div>
+			
+			<div class="col-12 col-sm-5">
+	   		    <label for="idlistPlantilla">
+			    Plantilla:&nbsp;
+			    </label>
+				<select class="custom-select custom-select-sm " id="idlistPlantilla">
+				  <option value="1">Planeación Sprint</option>
+				  <option value="2">Sprint Diario</option>
+				  <option value="3">Lecciones aprendidas</option>
+				  <option value="4" selected>Cambio Alcances</option>
+				</select>	
+			</div>
+					
+		</div>
+		<div class="row mx-2 my-2">
+		  <div class="form-group col-12 col-md-6">
+		    <label for="idNombreEvento">Nombre evento:</label>
+		    <input type="text" class="form-control form-control-sm" id="idNombreEvento" 
+		     value="Negociaci&oacute;n de cambio de alcances">
+		  </div>
+		  
+		  <div class="form-group col-12 col-md-6">
+		    <label for="idObjetivo">Objetivo:</label>
+		    <input type="text" class="form-control form-control-sm" id="idObjetivo" 
+		     value = "Acordar alcances realistas para segundo trimestre">
+		  </div>
+		</div>
+		<hr class="border-top border-primary">
+		
+		<div class="row mx-2 my-2">
+			<div class="font-weight-bold col-12 text-primary">Contactos Invitados:</div>
+		
+			<div class="col-12">
+	   		    <label for="idlistPlantilla">
+			    Tem&aacute;tica:&nbsp;
+			    </label>
+				<select class="custom-select custom-select-sm " id="idlistContactos">
+				  <option value="1">Portal Buen Fin</option>
+				  <option value="2" >Gobierno de datos</option>
+				  <option value="3">Personal</option>
+				  <option value="4">Frecuentes</option>
+				  <option value="5">Todos</option>
+				</select>	
+			</div>
+			
+			<table class="table table-sm mt-3 ">
+			<thead class="text-primary">
+			  <tr>
+			  <th>Nombre</th>
+			  <th class="text-center">Invitar</th>
+			  <th class="text-center">Rol</th>
+			  </tr>
+			</thead>
+			<tbody>
+			
+			 <tr>
+				 <td>Arellano Martínez Josu&eacute;</td>
+				 <td class="text-center">
+				  <input class="form-check-input" type="checkbox" value="AMJ" >
+				 </td>
+				 <td class="text-center">
+					<select class="custom-select custom-select-sm " id="idlistRoles">
+					  <option value="1">Asistente</option>
+					  <option value="2" >Moderador</option>
+					  <option value="3">Ponente</option>
+					  <option value="4">Scrum Master</option>
+					  <option value="5">Product Owner</option>
+					</select>	
+				 </td>
+			 </tr>
+			 
+			 <tr>
+				 <td class="text-primary">Ballesteros Arce M&oacute;nica</td>
+				 <td class="text-center">
+				  <input class="form-check-input" type="checkbox" value="BAM" checked>
+				 </td>
+				 <td class="text-center">
+					<select class="custom-select custom-select-sm " id="idlistRoles2">
+					  <option value="1">Asistente</option>
+					  <option value="2" selected>Moderador</option>
+					  <option value="3">Ponente</option>
+					  <option value="4">Scrum Master</option>
+					  <option value="5">Product Owner</option>
+					</select>	
+				 </td>
+			 </tr>
+			 
+			 <tr>
+				 <td class="text-primary">Casasola Dom&iacute;nguez Ram&oacute;n</td>
+				 <td class="text-center">
+				  <input class="form-check-input" type="checkbox" value="AMJ" checked>
+				 </td>
+				 <td class="text-center">
+					<select class="custom-select custom-select-sm " id="idlistRoles3">
+					  <option value="1">Asistente</option>
+					  <option value="2" >Moderador</option>
+					  <option value="3" selected>Ponente</option>
+					  <option value="4">Scrum Master</option>
+					  <option value="5">Product Owner</option>
+					</select>	
+				 </td>
+			 </tr>
+			</tbody>
+			
+			</table>
+		</div>
+		<hr class="border-top border-info">
+		
+		<div class="row mx-2 my-2">
+			<div class="font-weight-bold col-12 text-info">Otros Invitados:</div>
+			<div class="col-12 col-sm-4">
+	   		    <label for="idlistAreas">
+			    Area:&nbsp;
+			    </label>
+				<select class="custom-select custom-select-sm " id="idlistAreas">
+				  <option value="1">Clientes</option>
+				  <option value="2" >Direcci&oacute;n comercial</option>
+				  <option value="3">Operaciones</option>
+				  <option value="4">RRHH</option>
+				  <option value="5">Tecnolog&iacute;a</option>
+				</select>	
+			</div>
+			
+			<div class="col-12 col-sm-4 form-group">
+	   		    <label for="idNombreBuscar">
+			    Nombre:&nbsp;
+			    </label>
+		    	<input type="text" class="form-control form-control-sm" id="idNombreBuscar" value="*Mart*">
+			</div>
+			
+			<div class="col-12 col-sm-2 form-group">
+	   		    <label for="idNunEmpBuscar">
+			    Num.Emp:&nbsp;
+			    </label>
+		    	<input type="text" class="form-control form-control-sm" id="idNunEmpBuscar" value="">
+			</div>
+			<div class="col-12 col-sm-2 form-group">
+				<br>
+				<button class="btn btn-info">Buscar</button>
+			</div>			
+			<table class="table table-sm mt-3 ">
+			<thead class="text-info">
+			  <tr>
+			  <th>Nombre</th>
+			  <th class="text-center">Invitar</th>
+			  <th class="text-center">Rol</th>
+			  </tr>
+			</thead>
+			<tbody>
+			
+			 <tr>
+				 <td class="text-info">Martí Garc&iacute;a Vicente</td>
+				 <td class="text-center">
+				  <input class="form-check-input" type="checkbox" value="MGV" checked>
+				 </td>
+				 <td class="text-center">
+					<select class="custom-select custom-select-sm " id="idlistRoles">
+					  <option value="1">Asistente</option>
+					  <option value="2" >Moderador</option>
+					  <option value="3">Ponente</option>
+					  <option value="4">Scrum Master</option>
+					  <option value="5" selected>Product Owner</option>
+					</select>	
+				 </td>
+			 </tr>
+			 
+			 <tr>
+				 <td class="">Morales Mart&iacute;nez Blanca</td>
+				 <td class="text-center">
+				  <input class="form-check-input" type="checkbox" value="MMB">
+				 </td>
+				 <td class="text-center">
+					<select class="custom-select custom-select-sm " id="idlistRoles2">
+					  <option value="1" selected>Asistente</option>
+					  <option value="2" >Moderador</option>
+					  <option value="3">Ponente</option>
+					  <option value="4">Scrum Master</option>
+					  <option value="5">Product Owner</option>
+					</select>	
+				 </td>
+			 </tr>
+			 
+			 <tr>
+				 <td class="text-info">Rojas De la Cruz Martín</td>
+				 <td class="text-center">
+				  <input class="form-check-input" type="checkbox" value="RDM" checked>
+				 </td>
+				 <td class="text-center">
+					<select class="custom-select custom-select-sm " id="idlistRoles3">
+					  <option value="1">Asistente</option>
+					  <option value="2" >Moderador</option>
+					  <option value="6" selected>Usuario</option>
+					  <option value="4">Scrum Master</option>
+					  <option value="5">Product Owner</option>
+					</select>	
+				 </td>
+			 </tr>
+			</tbody>
+			
+			</table>
+		</div>
+		
+		<hr class="border-top border-secondary">
+		<div class="row mx-2 my-2">
+			<div class="font-weight-bold col-12 text-secondary">Programaci&oacute;n:</div>
+			
+			<div class="col-5 col-sm-3 form-group ">
+	   		    <label for="idDuracion">
+			    Duraci&oacute;n:&nbsp;
+			    </label>
+			    <div class="row">
+			    	<input type="number" class="form-control form-control-sm col text-center" id="idDuracion" value="60">
+			    	<span class="col px-2">min.</span>
+		    	</div>
+			</div>
+			
+			<div class="col-7 col-sm-4 form-group">
+	   		    <label for="idFecha">
+			    Fecha:
+			    </label>
+		    	<input type="date" class="form-control form-control-sm" id="idFecha" value="60">
+			</div>
+			
+			<div class="col-12 col-sm-5 form-group">
+				<br>
+				<button class="btn btn-secondary">Proponer hora</button>
+			</div>			
+		</div>
+		<div class="row mx-2 my-2">
+			<span class="font-weight-bold">Horas propuestas:&nbsp; </span>
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" id="idHora01" name="hora" class="custom-control-input">
+			  <label class="custom-control-label" for="idHora01">11:00</label>
+			</div>
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" id="idHora02" name="hora" class="custom-control-input">
+			  <label class="custom-control-label" for="idHora02">16:30</label>
+			</div>		
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" id="idHora03" name="hora" class="custom-control-input">
+			  <label class="custom-control-label" for="idHora03">17:30</label>
+			</div>		
+        </div>
+		<hr class="border-top border-secondary">
+		<div class="row mx-2 my-2 justify-content-around">
+			<button class="col-12 col-sm-4 col-md-3 col-lg-2 btn btn-primary">Registrar</button>
+			<button class="col-12 col-sm-4 col-md-3 col-lg-2 btn btn-danger">Cancelar y salir</button>
+		</div>
+	</div>
+
+</body>
+</html>
